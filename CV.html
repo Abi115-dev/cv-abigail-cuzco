@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Abigail Cuzco</title>
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+    <!-- ========================================== -->
+    <!-- HEADER: Datos Personales (Foto + Nombre)   -->
+    <!-- Uso de Flexbox: align-items, justify-content -->
+    <!-- ========================================== -->
+    <header class="header">
+        <div class="header-container">
+            <div class="profile-photo">
+                <img src="WhatsApp Image 2026-11-06 at 8.26.35 PM.jpeg" alt="Foto de Abigail Cuzco">
+            </div>
+            <div class="header-text">
+                <h1>Abigail Cuzco</h1>
+                <p class="job-title">Diseñadora UI/UX & Desarrolladora Web</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- MENÚ DE NAVEGACIÓN (Flexbox: flex-direction, justify-content) -->
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="#perfil">Perfil</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#experiencia">Experiencia</a></li>
+            <li><a href="#educacion">Educación</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+        </ul>
+    </nav>
+
+    <!-- ========================================== -->
+    <!-- CONTENEDOR PRINCIPAL EN DOS COLUMNAS       -->
+    <!-- Uso de Flexbox: display: flex, gap         -->
+    <!-- ========================================== -->
+    <div class="cv-layout">
+
+        <!-- COLUMNA IZQUIERDA: Sidebar (Contacto, Habilidades e Idiomas) -->
+        <aside class="sidebar">
+            
+            <!-- SECCIÓN: Datos de Contacto -->
+            <section id="contacto" class="sidebar-section">
+                <h2>Contacto</h2>
+                <ul class="contact-list">
+                    <li>📧 <strong>Email:</strong><br><a href="mailto:abigail.cuzco@email.com">abigail.cuzco@email.com</a></li>
+                    <li>📞 <strong>Teléfono:</strong><br><a href="tel:+593999999999">+593 99 999 9999</a></li>
+                    <li>📍 <strong>Ubicación:</strong><br>Cuenca, Ecuador</li>
+                    <li>🔗 <strong>LinkedIn:</strong><br><a href="https://linkedin.com" target="_blank">linkedin.com/in/abigailcuzco</a></li>
+                    <li>💻 <strong>GitHub:</strong><br><a href="https://github.com" target="_blank">github.com/abigailcuzco</a></li>
+                </ul>
+            </section>
+
+            <!-- SECCIÓN: Habilidades -->
+            <section id="habilidades" class="sidebar-section">
+                <h2>Habilidades</h2>
+                <div class="skills-container">
+                    <span class="skill-tag">HTML5 / CSS3</span>
+                    <span class="skill-tag">Flexbox Layout</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Figma / UI/UX</span>
+                    <span class="skill-tag">Git & GitHub</span>
+                    <span class="skill-tag">Diseño Responsive</span>
+                </div>
+            </section>
+
+            <!-- SECCIÓN: Idiomas -->
+            <section class="sidebar-section">
+                <h2>Idiomas</h2>
+                <ul class="info-list">
+                    <li><strong>Español:</strong> Nativo</li>
+                    <li><strong>Inglés:</strong> B2 Intermedio Alto</li>
+                </ul>
+            </section>
+        </aside>
+
+        <!-- COLUMNA DERECHA: Main Content (Perfil, Experiencia, Educación) -->
+        <main class="main-content">
+
+            <!-- Perfil Profesional -->
+            <section id="perfil" class="main-section">
+                <h2>Perfil Profesional</h2>
+                <p>
+                    Desarrolladora Web y Diseñadora apasionada por crear soluciones digitales intuitivas y accesibles. Especializada en la maquetación semántica con HTML5, estilos CSS3 y diseño responsivo enfocado en la mejor experiencia de usuario.
+                </p>
+            </section>
+
+            <!-- Experiencia Laboral -->
+            <section id="experiencia" class="main-section">
+                <h2>Experiencia Laboral</h2>
+                
+                <article class="timeline-item">
+                    <div class="item-header">
+                        <h3>Desarrolladora Front-End Jr.</h3>
+                        <span class="item-date">2024 — Presente</span>
+                    </div>
+                    <p class="company-name">Agencia Web Innova</p>
+                    <ul>
+                        <li>Maquetación de páginas web accesibles y responsivas.</li>
+                        <li>Implementación de interfaces responsivas utilizando modelos de maquetación Flexbox.</li>
+                    </ul>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="item-header">
+                        <h3>Maquetadora Web Trainee</h3>
+                        <span class="item-date">2023 — 2024</span>
+                    </div>
+                    <p class="company-name">Estudio Digital Creativo</p>
+                    <ul>
+                        <li>Diseño de prototipos interactivos en Figma.</li>
+                        <li>Estructuración de código limpio en HTML y CSS siguiendo buenas prácticas.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <!-- Formación Académica -->
+            <section id="educacion" class="main-section">
+                <h2>Formación Académica</h2>
+                
+                <article class="timeline-item">
+                    <div class="item-header">
+                        <h3>Tecnología en Desarrollo de Software</h3>
+                        <span class="item-date">2021 — 2024</span>
+                    </div>
+                    <p class="company-name">Instituto Tecnológico Superior</p>
+                </article>
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>

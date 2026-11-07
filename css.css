@@ -1,0 +1,278 @@
+/* ==========================================================================
+   VARIABLES CSS (Colores, Tipografía y Espacios)
+   ========================================================================== */
+:root {
+    --primary-color: #0f172a;       /* Azul oscuro para encabezados */
+    --accent-color: #0d9488;        /* Color verde azulado/Teal de acento */
+    --accent-light: #ccfbf1;        /* Fondo para etiquetas de habilidades */
+    --bg-main: #f8fafc;             /* Fondo gris muy claro */
+    --bg-card: #ffffff;             /* Fondo blanco */
+    --bg-sidebar: #f1f5f9;          /* Fondo barra lateral */
+    --text-color: #334155;          /* Texto principal */
+    --text-muted: #64748b;          /* Texto secundario */
+    --border-color: #e2e8f0;        /* Bordes suaves */
+    --font-family: 'Inter', sans-serif;
+    --line-height: 1.6;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-main);
+    color: var(--text-color);
+    line-height: var(--line-height);
+}
+
+/* ==========================================================================
+   FLEXBOX EN HEADER
+   ========================================================================== */
+.header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2.5rem 1.5rem;
+}
+
+.header-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    /* FLEXBOX */
+    display: flex;
+    flex-direction: row;             /* Dirección horizontal */
+    align-items: center;             /* Alineación vertical al centro */
+    justify-content: flex-start;     /* Alineación al inicio */
+    gap: 1.5rem;
+}
+
+.profile-photo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-color);
+}
+
+.header-text h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.job-title {
+    font-size: 1.2rem;
+    color: #5eead4;
+    margin-top: 0.25rem;
+}
+
+/* ==========================================================================
+   FLEXBOX EN MENÚ DE NAVEGACIÓN (NAV)
+   ========================================================================== */
+.nav-bar {
+    background-color: #1e293b;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-bar ul {
+    max-width: 1000px;
+    margin: 0 auto;
+    /* FLEXBOX */
+    display: flex;
+    flex-direction: row;             /* Dirección horizontal */
+    justify-content: flex-start;     /* Alineación horizontal */
+    list-style: none;
+}
+
+.nav-bar a {
+    display: block;
+    padding: 0.85rem 1.2rem;
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.nav-bar a:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+/* ==========================================================================
+   LAYOUT PRINCIPAL EN DOS COLUMNAS (FLEXBOX)
+   ========================================================================== */
+.cv-layout {
+    max-width: 1000px;
+    margin: 2rem auto;
+    /* FLEXBOX OBLIGATORIO */
+    display: flex;
+    flex-direction: row;             /* Columna izquierda y derecha */
+    justify-content: space-between;  /* Distribución de espacio */
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+/* Columna Izquierda (Sidebar) */
+.sidebar {
+    flex: 1;                         /* Ocupa 1 parte proporcional */
+    background-color: var(--bg-sidebar);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    height: fit-content;
+}
+
+.sidebar-section {
+    margin-bottom: 2rem;
+}
+
+.sidebar-section h2 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+/* Estilos de Contacto */
+.contact-list {
+    list-style: none;
+}
+
+.contact-list li {
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+    word-break: break-all;
+}
+
+.contact-list a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-list a:hover {
+    text-decoration: underline;
+}
+
+/* Flexbox para Etiquetas de Habilidades */
+.skills-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;                 /* Permite saltar de línea */
+    gap: 0.5rem;
+}
+
+.skill-tag {
+    background-color: var(--accent-light);
+    color: #115e59;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.info-list {
+    list-style: none;
+}
+
+.info-list li {
+    margin-bottom: 0.5rem;
+}
+
+/* Columna Derecha (Contenido Principal) */
+.main-content {
+    flex: 2.5;                       /* Ocupa 2.5 partes proporcionales */
+    background-color: var(--bg-card);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.main-section {
+    margin-bottom: 2.5rem;
+}
+
+.main-section h2 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.4rem;
+    margin-bottom: 1.2rem;
+}
+
+.timeline-item {
+    margin-bottom: 1.5rem;
+}
+
+/* FLEXBOX EN ENCABEZADO DE CADA EXPERIENCIA */
+.item-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;  /* Título a la izquierda, fecha a la derecha */
+    align-items: baseline;           /* Alineación en la base del texto */
+}
+
+.item-header h3 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+.item-date {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.company-name {
+    font-weight: 600;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.main-content ul {
+    margin-left: 1.2rem;
+}
+
+.main-content li {
+    margin-bottom: 0.3rem;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 3rem;
+}
+
+.copyright {
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+/* ==========================================================================
+   RESPONSIVE (Adaptación a móviles)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;      /* Pasa a vertical en móviles */
+        text-align: center;
+    }
+
+    .cv-layout {
+        flex-direction: column;      /* Pasa de 2 columnas a 1 columna */
+    }
+
+    .sidebar, .main-content {
+        width: 100%;
+    }
+}
